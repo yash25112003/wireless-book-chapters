@@ -37,10 +37,16 @@ CONTENT_POINTS = [
 # ==========================
 import os
 import re
+import base64
+import requests
+import traceback
+import time
 from github import Github, GithubException
 from crewai import Agent, Task, Crew
 from langchain_groq import ChatGroq
-import time
+from dotenv import load_dotenv
+
+load_dotenv() 
 
 # ================
 # LLM Setup
