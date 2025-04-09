@@ -45,18 +45,16 @@ import time
 # ================
 # LLM Setup
 # ================
-os.environ["GROQ_API_KEY"] = "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"
-
 llm = ChatGroq(
     temperature=0,
     model_name="groq/gemma2-9b-it",
-    api_key=os.environ["GROQ_API_KEY"],
+    api_key=os.getenv('GROQ_API_KEY'),
 )
 
 # ================
 # GitHub Config
 # ================
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = os.getenv('G_TOKEN')
 GITHUB_USERNAME = "yash25112003"
 REPO_OWNER = "yash25112003"
 REPO_NAME = "wireless-book-chapters"
