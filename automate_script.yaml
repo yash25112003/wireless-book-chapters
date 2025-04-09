@@ -1,0 +1,41 @@
+# name: Automate Python Script
+# on:
+#   schedule:
+#     - cron: "*/5 * * * *"  # Runs every 5 minutes
+#   workflow_dispatch:  # Allows manual execution from GitHub Actions
+# permissions:
+#   contents: write  # Grant write permissions to the GITHUB_TOKEN
+# jobs:
+#   run-script:
+#     runs-on: ubuntu-latest
+    
+#     steps:
+#       - name: ✅ Checkout Repository
+#         uses: actions/checkout@v3
+#       - name: 🐍 Set Up Python
+#         uses: actions/setup-python@v4
+#         with:
+#           python-version: '3.9'
+#       - name: 📦 Install Dependencies
+#         run: |
+#           pip install --upgrade pip setuptools wheel
+#           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+#           pip install --no-cache-dir aiohttp==3.9.3
+#           pip install --no-cache-dir PyGithub crewai groq
+  
+#       - name: 🚀 Run Python Script
+#         env:
+#           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+#           G_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         run: python main.py
+      
+#       - name: ⬆️ Commit and Push Changes (if any)
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         run: |
+#           git config user.name github-actions
+#           git config user.email github-actions@github.com
+#           git add .
+#           git diff --staged --quiet || git commit -m "🔄 Auto-update: Commit latest changes"
+#           git pull --rebase  # Add this line to pull and rebase before pushing
+#           git push
