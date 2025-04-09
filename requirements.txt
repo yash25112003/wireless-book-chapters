@@ -1,0 +1,13 @@
+pip
+setuptools
+wheel
+aiohttp==3.9.3
+PyGithub
+groq
+crewai
+requests
+python-dotenv
+PyGithub
+langchain-groq 
+langchain_community 
+numpy
