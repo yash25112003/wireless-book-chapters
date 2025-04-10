@@ -26,7 +26,7 @@ jobs:
       - name: 🚀 Run Python Script
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          G_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          G_TOKEN: ${{ secrets.G_TOKEN }}
         run: python main.py
       
       - name: ⬆️ Commit and Push Changes (if any)
