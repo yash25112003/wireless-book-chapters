@@ -1,5 +1,0 @@
-The text needs to clearly state which specific standards from IEEE, 3GPP, and ITU it is referencing.  For example, it could say "This technology adheres to the IEEE 802.11ax standard for wireless communications" or "The QKD protocol used is based on the ITU-T G.652 standard for optical fibers."  Without this specific information, it is impossible to validate the claims made. 
-
-
-This is the summary of your work so far: 
-The text discusses quantum-secure communications and QKD but lacks clarity on the specific standards it refers to. To verify these claims, we need to find relevant standards documents from IEEE, 3GPP, and ITU that address QKD.  A comparison of the text's assertions with the information provided in these standards will allow us to assess their validity.  The text should clearly identify the specific standards it is referencing to allow for proper validation.
