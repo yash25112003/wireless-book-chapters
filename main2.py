@@ -365,7 +365,7 @@ def build_chapter_plan():
         # Part 3: Advanced Concepts and Societal Impact (Type: theme)
         12: {
             "title": "Cognitive Radio Networks: Intelligent Dynamic Spectrum Access",
-            "points": [[CONTENT_POINTS[23], CONTENT_POINTS[24]], # CONTENT_POINTS[23] is a general heading for spectrum
+            "points": [CONTENT_POINTS[23], CONTENT_POINTS[24]], # CONTENT_POINTS[23] is a general heading for spectrum
             "type": "theme"
         },
         13: {
