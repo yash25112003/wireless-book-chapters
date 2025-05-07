@@ -5,51 +5,51 @@ BOOK_FOLDER_NAME = "FUTURE INTELLIGENT WIRELESS ECOSYSTEM"
 CHAPTER_TITLE = "THE FUTURE INTELLIGENT WIRELESS ECOSYSTEM"
 MAX_CHAPTERS = 22
 CONTENT_POINTS = [
-    # Foundation points from Chapter 2 (expanded with technical details)
-    "AI-Native 6G Networks with Self-Optimizing capabilities",
-    "Terahertz (THz) spectrum utilization (0.1-10 THz)",
-    "Quantum-AI synergy for network optimization",
-    "Unified terrestrial-satellite-aerial networks (LEO/MEO/GEO)",
-    "Peak data rates of 1 Tbps with sub-0.1ms latency",
-    "Edge Intelligence for decentralized real-time processing",
-    "Fog Computing vs Pure Edge trade-offs (3.2ms vs 7.8ms latency)",
-    "75% of enterprise data processed at edge by 2025",
-    "Healthcare edge processing (4.3s diagnostic imaging)",
-    "AI-Driven Network Automation & Zero-Touch Management",
-    "Reinforcement Learning (73% better novel scenario adaptation)",
-    "Rule-based systems (91% regulatory compliance)",
-    "Dynamic Network Slicing for Industry 5.0",
-    "URLLC for factories (99.99999% reliability)",
-    "eMBB for video, mMTC for sensor networks",
-    "35-40% operational cost reduction",
-    "Massive IoT Ecosystems scaling to billions of devices",
-    "Projected 75B+ IoT connections by 2025",
-    "AI-optimized IoT power consumption (4x reduction)",
-    "Digital Twins for cyber-physical synchronization",
-    "High-fidelity physics models (92% accuracy)",
-    "Statistical twins (85% accuracy, 4.5x less compute)",
-    "78% reduction in network outages",
-    "Advanced Spectrum Utilization with Cognitive Radio & THz",
-    "Cognitive Radio Networks (200-300% spectrum efficiency)",
-    "THz demonstrations: 100 Gbps lab, 47 Gbps urban",
-    "AI beam steering (42% THz signal loss reduction)",
-    "Enhanced Human-Machine Collaboration & Tactile Internet",
-    "Tactile feedback for remote surgery (projected $12.6B market)",
-    "Industry 5.0 cobots for human augmentation",
-    "Proactive Cybersecurity & Federated Learning for Privacy",
-    "Federated Learning (70-83% less data transfer)",
-    "92% zero-day attack detection rate",
-    "Quantum-Enhanced Security & Computation",
-    "Quantum Key Distribution (10-20 Mbps metro rates)",
-    "Quantum-secure AI protocols by 2035",
-    "Sustainable & Energy-Efficient Wireless Ecosystems",
-    "AI-optimized base stations (25-35% energy savings)",
-    "RF energy harvesting (0.1 μW/cm² for IoT)",
-    "Blockchain for e-waste tracking (53M metric tons)",
-    "Ethical AI Governance & Bio-Inspired Network Resilience",
-    "Explainable AI (XAI) for transparency",
-    "Ant colony optimization (37% traffic reduction)",
-    "Bio-inspired algorithms (63% attack resilience)"
+    # Points from "CHAPTER 2: FUTURE INTELLIGENT WIRELESS ECOSYSTEM"
+    "AI-Native 6G Networks with Self-Optimizing capabilities",  # 0
+    "Terahertz (THz) spectrum utilization (0.1-10 THz)",  # 1
+    "Quantum-AI synergy for network optimization",  # 2
+    "Unified terrestrial-satellite-aerial networks (LEO/MEO/GEO)",  # 3
+    "Peak data rates of 1 Tbps with sub-0.1ms latency",  # 4
+    "Edge Intelligence for decentralized real-time processing",  # 5
+    "Fog Computing vs Pure Edge trade-offs (3.2ms vs 7.8ms latency)",  # 6
+    "75% of enterprise data processed at edge by 2025",  # 7
+    "Healthcare edge processing (4.3s diagnostic imaging)",  # 8
+    "AI-Driven Network Automation & Zero-Touch Management",  # 9
+    "Reinforcement Learning (73% better novel scenario adaptation)",  # 10
+    "Rule-based systems (91% regulatory compliance)",  # 11
+    "Dynamic Network Slicing for Industry 5.0",  # 12
+    "URLLC for factories (99.99999% reliability)",  # 13
+    "eMBB for video, mMTC for sensor networks",  # 14
+    "35-40% operational cost reduction",  # 15
+    "Massive IoT Ecosystems scaling to billions of devices",  # 16
+    "Projected 75B+ IoT connections by 2025",  # 17
+    "AI-optimized IoT power consumption (4x reduction)",  # 18
+    "Digital Twins for cyber-physical synchronization",  # 19
+    "High-fidelity physics models (92% accuracy)",  # 20
+    "Statistical twins (85% accuracy, 4.5x less compute)",  # 21
+    "78% reduction in network outages",  # 22
+    "Advanced Spectrum Utilization with Cognitive Radio & THz",  # 23 (General heading for spectrum)
+    "Cognitive Radio Networks (200-300% spectrum efficiency)",  # 24
+    "THz demonstrations: 100 Gbps lab, 47 Gbps urban",  # 25
+    "AI beam steering (42% THz signal loss reduction)",  # 26
+    "Enhanced Human-Machine Collaboration & Tactile Internet",  # 27
+    "Tactile feedback for remote surgery (projected $12.6B market)",  # 28
+    "Industry 5.0 cobots for human augmentation",  # 29
+    "Proactive Cybersecurity & Federated Learning for Privacy",  # 30 (General heading for security aspects)
+    "Federated Learning (70-83% less data transfer)",  # 31
+    "92% zero-day attack detection rate",  # 32
+    "Quantum-Enhanced Security & Computation",  # 33 (General heading for quantum)
+    "Quantum Key Distribution (10-20 Mbps metro rates)",  # 34
+    "Quantum-secure AI protocols by 2035",  # 35
+    "Sustainable & Energy-Efficient Wireless Ecosystems",  # 36 (General heading for sustainability)
+    "AI-optimized base stations (25-35% energy savings)",  # 37
+    "RF energy harvesting (0.1 μW/cm² for IoT)",  # 38
+    "Blockchain for e-waste tracking (53M metric tons)",  # 39
+    "Ethical AI Governance & Bio-Inspired Network Resilience",  # 40 (General heading for ethics/bio-inspired)
+    "Explainable AI (XAI) for transparency",  # 41
+    "Ant colony optimization (37% traffic reduction)",  # 42
+    "Bio-inspired algorithms (63% attack resilience)" # 43 (Added as per reasoning in thought block)
 ]
 
 # ==========================
@@ -304,141 +304,124 @@ def github_commit(repo, file_content, filename, commit_message):
 # CONTENT DISTRIBUTION SYSTEM
 # ============================
 def build_chapter_plan():
-    # Foundation chapters (expanded with technical sub-points)
     chapters = {
+        # Part 1: Foundational Technologies (Type: foundation)
         1: {
-            "title": "AI-Native 6G Networks", 
-            "points": [
-                CONTENT_POINTS[0],  # AI-Native 6G
-                CONTENT_POINTS[1],  # THz spectrum
-                CONTENT_POINTS[2],  # Quantum-AI
-                CONTENT_POINTS[3],  # Unified networks
-                CONTENT_POINTS[4]   # 1 Tbps
-            ],
+            "title": "AI-Native 6G: Core Principles and Performance Targets",
+            "points": [CONTENT_POINTS[0], CONTENT_POINTS[4]],
             "type": "foundation"
         },
         2: {
-            "title": "Edge Intelligence", 
-            "points": [
-                CONTENT_POINTS[5],  # Edge processing
-                CONTENT_POINTS[6],  # Fog vs Edge
-                CONTENT_POINTS[7],  # 75% at edge
-                CONTENT_POINTS[8]   # Healthcare example
-            ],
+            "title": "Next-Generation Spectrum: Terahertz (THz) Potentials and Challenges",
+            "points": [CONTENT_POINTS[1], CONTENT_POINTS[25], CONTENT_POINTS[26]],
             "type": "foundation"
         },
         3: {
-            "title": "Network Automation & Management", 
-            "points": [
-                CONTENT_POINTS[9],  # ZSM
-                CONTENT_POINTS[10], # RL
-                CONTENT_POINTS[11]  # Rule-based
-            ],
+            "title": "Edge Intelligence: Decentralized Processing for Real-Time Applications",
+            "points": [CONTENT_POINTS[5], CONTENT_POINTS[7], CONTENT_POINTS[8]],
             "type": "foundation"
         },
         4: {
-            "title": "Dynamic Network Slicing", 
-            "points": [
-                CONTENT_POINTS[12], # Slicing concept
-                CONTENT_POINTS[13], # URLLC
-                CONTENT_POINTS[14], # eMBB/mMTC
-                CONTENT_POINTS[15]  # Cost reduction
-            ],
+            "title": "Automating the Future: AI-Driven Network Management and Zero-Touch Operations",
+            "points": [CONTENT_POINTS[9], CONTENT_POINTS[10], CONTENT_POINTS[11]],
             "type": "foundation"
         },
         5: {
-            "title": "Massive IoT Ecosystems", 
-            "points": [
-                CONTENT_POINTS[16], # IoT scaling
-                CONTENT_POINTS[17], # 75B+ devices
-                CONTENT_POINTS[18]  # Power optimization
-            ],
+            "title": "Connecting Billions: Scaling Massive IoT Ecosystems with AI",
+            "points": [CONTENT_POINTS[16], CONTENT_POINTS[17], CONTENT_POINTS[18]],
             "type": "foundation"
         },
-        # Generation evolution chapters (unchanged)
-        6: {"title": "3G: Mobile Broadband Revolution", "points": [], "type": "evolution"},
-        7: {"title": "4G: The App Economy Era", "points": [], "type": "evolution"},
-        8: {"title": "4G LTE: Digital Lifestyle", "points": [], "type": "evolution"},
-        9: {"title": "5G: Industry Transformation", "points": [], "type": "evolution"},
-        10: {"title": "5G Advanced: Network Slicing", "points": [], "type": "evolution"},
-        11: {
-            "title": "Beyond 5G: Internet of Beings", 
-            "points": [
-                CONTENT_POINTS[27],  # Enhanced Human-Machine Collaboration
-                CONTENT_POINTS[28],  # Tactile feedback for remote surgery
-                CONTENT_POINTS[29]   # Industry 5.0 cobots
-            ], 
+        # Part 2: Architectural Innovations and Service Evolution (Type: evolution)
+        6: {
+            "title": "Unified Connectivity: Integrating Terrestrial, Satellite, and Aerial Networks",
+            "points": [CONTENT_POINTS[3]],
             "type": "evolution"
         },
-        12: {"title": "6G: Internet of Everything", "points": [], "type": "evolution"},
-        # Thematic chapters (now fully populated)
+        7: {
+            "title": "Architectural Choices: Fog Computing versus Pure Edge Intelligence",
+            "points": [CONTENT_POINTS[6]],
+            "type": "evolution"
+        },
+        8: {
+            "title": "Dynamic Network Slicing: Customizing Services for Industry 5.0 and Beyond",
+            "points": [CONTENT_POINTS[12], CONTENT_POINTS[13], CONTENT_POINTS[14], CONTENT_POINTS[15]],
+            "type": "evolution"
+        },
+        9: {
+            "title": "Digital Twins: Bridging Physical and Virtual Worlds for Network Optimization",
+            "points": [CONTENT_POINTS[19], CONTENT_POINTS[20], CONTENT_POINTS[21], CONTENT_POINTS[22]],
+            "type": "evolution"
+        },
+        10: {
+            "title": "The Tactile Internet: Enabling Enhanced Human-Machine Collaboration",
+            "points": [CONTENT_POINTS[27], CONTENT_POINTS[28]],
+            "type": "evolution"
+        },
+        11: {
+            "title": "Industry 5.0 Realized: Human Augmentation with Collaborative Robots (Cobots)",
+            "points": [CONTENT_POINTS[29]], # Focus on cobots aspect of HMC
+            "type": "evolution"
+        },
+        # Part 3: Advanced Concepts and Societal Impact (Type: theme)
+        12: {
+            "title": "Cognitive Radio Networks: Intelligent Dynamic Spectrum Access",
+            "points": [CONTENT_POINTS[24]], # CONTENT_POINTS[23] is a general heading for spectrum
+            "type": "theme"
+        },
         13: {
-            "title": "Spectrum Management Challenges",
-            "points": [
-                CONTENT_POINTS[23], # Cognitive Radio
-                CONTENT_POINTS[24], # THz demonstrations
-                CONTENT_POINTS[25]  # AI beam steering
-            ],
+            "title": "The Quantum-AI Synergy: Optimizing Future Network Performance and Design",
+            "points": [CONTENT_POINTS[2]],
             "type": "theme"
         },
-        14: {"title": "Network Economics", "points": [], "type": "theme"},
+        14: {
+            "title": "Securing the Quantum Age: Principles of Quantum Key Distribution (QKD)",
+            "points": [CONTENT_POINTS[33], CONTENT_POINTS[34]], # CP33 for context
+            "type": "theme"
+        },
         15: {
-            "title": "Edge Computing Revolution",
-            "points": [
-                CONTENT_POINTS[19], # Digital Twins
-                CONTENT_POINTS[20], # Physics models
-                CONTENT_POINTS[21], # Statistical twins
-                CONTENT_POINTS[22]  # Outage reduction
-            ],
+            "title": "Privacy-Preserving AI: The Role of Federated Learning in Wireless Networks",
+            "points": [CONTENT_POINTS[30], CONTENT_POINTS[31]], # CP30 for context
             "type": "theme"
         },
-        16: {"title": "Open RAN Disruption", "points": [], "type": "theme"},
+        16: {
+            "title": "AI for Proactive Cybersecurity: Strategies for Detecting Zero-Day Attacks",
+            "points": [CONTENT_POINTS[32]], # CP30 context is covered by previous chapter
+            "type": "theme"
+        },
         17: {
-            "title": "Satellite Integration",
-            "points": [
-                CONTENT_POINTS[3]   # Unified networks (reference only)
-            ],
+            "title": "Building Sustainable Wireless Ecosystems: AI for Energy Efficiency",
+            "points": [CONTENT_POINTS[36], CONTENT_POINTS[37]], # CP36 for context
             "type": "theme"
         },
         18: {
-            "title": "AI in Wireless Networks",
-            "points": [
-                CONTENT_POINTS[30],  # Proactive Cybersecurity
-                CONTENT_POINTS[31],  # Federated Learning
-                CONTENT_POINTS[32],  # 92% zero-day attack detection
-                CONTENT_POINTS[39],  # Ethical AI Governance
-                CONTENT_POINTS[40]   # XAI
-            ],
+            "title": "Innovations in Wireless Energy: RF Harvesting for Self-Sustaining IoT Devices",
+            "points": [CONTENT_POINTS[38]],
             "type": "theme"
         },
         19: {
-            "title": "Quantum-Secure Communications",
-            "points": [
-                CONTENT_POINTS[33], # Quantum-Enhanced Security
-                CONTENT_POINTS[34], # QKD
-                CONTENT_POINTS[35]  # Quantum-secure AI protocols
-            ],
+            "title": "Towards a Circular Economy in Tech: Blockchain for E-Waste Tracking and Management",
+            "points": [CONTENT_POINTS[39]],
             "type": "theme"
         },
         20: {
-            "title": "Sustainable Wireless Future",
-            "points": [
-                CONTENT_POINTS[36],  # Sustainable & Energy-Efficient
-                CONTENT_POINTS[37],  # AI-optimized base stations
-                CONTENT_POINTS[38],  # RF energy harvesting
-                CONTENT_POINTS[39],  # Blockchain for e-waste
-                CONTENT_POINTS[41],  # Ant colony optimization
-                CONTENT_POINTS[42]   # Bio-inspired algorithms
-            ],
+            "title": "Governing Intelligent Systems: Ethical AI and the Imperative of Explainable AI (XAI)",
+            "points": [CONTENT_POINTS[40], CONTENT_POINTS[41]], # CP40 for context
             "type": "theme"
         },
-        21: {"title": "Global Connectivity Impact", "points": [], "type": "theme"},
-        22: {"title": "2080: The Wireless Horizon", "points": [], "type": "future"}
+        21: {
+            "title": "Bio-Inspired Networking: Enhancing Resilience and Efficiency Through Nature's Designs",
+            "points": [CONTENT_POINTS[42], CONTENT_POINTS[43]], # CP40 context covered by previous chapter
+            "type": "theme"
+        },
+        # Part 4: Future Outlook (Type: future)
+        22: {
+            "title": "The Path to 2035 and Beyond: Realizing Quantum-Secure AI Protocols and the Future Wireless Horizon",
+            "points": [CONTENT_POINTS[35]],
+            "type": "future"
+        }
     }
-
-    # No need for additional content mapping as all points are now directly assigned
     return chapters
-
+    
 def validate_chapter_plan(plan):
     distributed_points = sum(len(ch['points']) for ch in plan.values())
     if distributed_points < len(CONTENT_POINTS):
