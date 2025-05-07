@@ -80,7 +80,7 @@ llm = ChatGroq(
 # ================
 # GitHub Config
 # ================
-GITHUB_TOKEN = os.getenv('GITHUB_TOKEN')
+GITHUB_TOKEN = os.getenv('G_TOKEN')
 GITHUB_USERNAME = "yash25112003"
 REPO_OWNER = "yash25112003"
 REPO_NAME = "wireless-book-chapters"
