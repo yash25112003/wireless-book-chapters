@@ -57,26 +57,30 @@ CONTENT_POINTS = [
 # ==========================
 import os
 import re
+import base64
+import requests
+import traceback
+import time
 from github import Github, GithubException
 from crewai import Agent, Task, Crew
 from langchain_groq import ChatGroq
-import time
+from dotenv import load_dotenv
+
+load_dotenv() 
 
 # ================
 # LLM Setup
 # ================
-os.environ["GROQ_API_KEY"] = "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"
-
 llm = ChatGroq(
     temperature=0,
-    model_name="groq/gemma2-9b-it",
-    api_key=os.environ["GROQ_API_KEY"],
+    model_name="gemma2-9b-it",
+    api_key=os.getenv('GROQ_API_KEY'),
 )
 
 # ================
 # GitHub Config
 # ================
-GITHUB_TOKEN = "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"
+GITHUB_TOKEN = os.getenv('G_TOKEN')
 GITHUB_USERNAME = "yash25112003"
 REPO_OWNER = "yash25112003"
 REPO_NAME = "wireless-book-chapters"
