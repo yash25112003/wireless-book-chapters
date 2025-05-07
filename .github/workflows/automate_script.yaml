@@ -5,40 +5,49 @@ on:
     - cron: "*/5 * * * *"  # Runs every 5 minutes
   workflow_dispatch:  # Allows manual execution from GitHub Actions
 
-permissions:
-  contents: write  # Grant write permissions to the GITHUB_TOKEN
-
 jobs:
   run-script:
     runs-on: ubuntu-latest
+    timeout-minutes: 10  # Prevent hanging jobs
+    
+    permissions:
+      contents: write  # Moved inside job for better scoping
+
     steps:
       - name: ✅ Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # Updated to v4
+        with:
+          fetch-depth: 0  # Required for proper git history
+          token: ${{ secrets.GITHUB_TOKEN }}  # Explicitly use default token
 
       - name: 🐍 Set Up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5  # Updated to v5
         with:
-          python-version: '3.9'
+          python-version: '3.10'  # Required for crewai compatibility
+          cache: 'pip'  # Enable caching
 
       - name: 📦 Install Dependencies
         run: |
-          pip install --upgrade pip setuptools wheel
+          python -m pip install --upgrade pip
           if [ -f requirements.txt ]; then
             pip install -r requirements.txt
           fi
-          pip install --no-cache-dir aiohttp==3.9.3 PyGithub crewai groq
+          pip install aiohttp PyGithub crewai groq
 
       - name: 🚀 Run Python Script
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          G_TOKEN: ${{ secrets.G_TOKEN }}
+          # Remove G_TOKEN - using default GITHUB_TOKEN instead
         run: python main2.py
 
-      - name: ⬆️ Commit and Push Changes (if any)
+      - name: ⬆️ Commit and Push Changes
+        if: success()  # Only push if previous steps succeeded
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Use default token
         run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
           git add .
-          git diff --staged --quiet || git commit -m "🔄 Auto-update: Commit latest changes"
+          git diff --cached --quiet || git commit -m "🔄 Auto-update: $(date +'%Y-%m-%d %H:%M:%S')"
           git pull --rebase
           git push
