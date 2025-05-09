@@ -32,7 +32,7 @@ jobs:
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           G_TOKEN: ${{ secrets.G_TOKEN }}
-        run: python main2.py
+        run: python main3.py
 
       - name: ⬆️ Commit and Push Changes (if any)
         run: |
